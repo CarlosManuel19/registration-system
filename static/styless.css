@@ -1,0 +1,141 @@
+body {
+  position: relative;
+  background-image: url('/static/img/fondo.jpg');
+  background-size: cover;
+}
+
+.header {
+  /* Estilos de la franja */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Ajusta la altura de la franja según tus preferencias */
+  background-color: #00000084; /* Color de la franja */
+  display: flex;
+  align-items: center; /* Alinea los botones verticalmente al centro de la franja */
+  justify-content: flex-end; /* Alinea los botones al lado derecho */
+  z-index: 9999; /* Asegura que la franja esté por encima de los demás elementos */
+  color: white;
+  text-align:center;
+  line-height: 100px; /* Ajusta la altura de línea para centrar verticalmente el texto */
+  font-size: 24px; /* Tamaño del texto */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Ajusta la altura de la franja según tus preferencias */
+  background-color: #00000084; /* Color de la franja */
+  
+}
+  
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px; /* Ajusta el margen superior según tu preferencia */
+    margin-bottom: 50px; /* Ajusta el margen inferior según tu preferencia */
+  }
+  
+  
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 300px;
+    height: 250px;
+    border: 4px solid #cccccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card img {
+    width: 99%;
+    height:100px;
+  }
+  
+  .card-info {
+    margin-top: 10px;
+  }
+  
+  .card-info h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .card-info p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .card-info a {
+    display: block;
+    text-align: center;
+    background-color: #191d1d84;
+    color: #ffffffc7;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .buttons-container {
+    /* Estilos del contenedor de los botones */
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones al lado derecho */
+    padding: 20px; /* Espaciado opcional para separar los botones del borde de la pantalla */
+    position: fixed; /* Mantiene los botones fijos en su posición */
+    top: 10px; /* Margen superior de 10px desde el borde de la pantalla */
+    right: 10px; /* Margen derecho de 10px desde el borde de la pantalla */
+    z-index: 999; /* Asegura que los botones estén por delante de otros elementos */
+  }
+  
+  .btn {
+  margin-left: 10px; /* Espacio entre botones, ajusta según tu preferencia */
+  border-radius: 30px; /* Ajusta el valor del radio para hacer los bordes más ovalados */
+  padding: 10px 20px; /* Ajusta el padding según tus preferencias para cambiar el tamaño de los botones */
+  background-color: #343a40; /* Color de fondo de los botones */
+  color: white; /* Color del texto en los botones */
+  border: none; /* Elimina el borde de los botones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  }
+  
+  .main-title {
+    /* Estilos del título principal */
+    position: fixed; /* Fija el título en su posición */
+    top: -50px; /* Ajusta la posición vertical desde el borde superior */
+    left: 10px; /* Ajusta la posición horizontal desde el borde izquierdo */
+    z-index: 1000; /* Asegura que el título esté por delante de la franja */
+    font-size: 80px; /* Tamaño del título principal */
+    text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+    color: #ffffff; /* Color del texto del título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para mejorar la legibilidad */
+  }
+  
+  .subtitle {
+    /* Estilos de la parte del texto entre paréntesis */
+    font-size: 24px; /* Tamaño de la letra para la parte entre paréntesis */
+  }
+
+  .welcome-message {
+    /* Estilos del mensaje de bienvenida */
+    margin-top: 140px; /* Ajusta la distancia desde la franja superior hasta el mensaje */
+    padding: 20px; /* Espaciado interior del mensaje */
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo del mensaje */
+    width: 70%; /* Ancho del mensaje */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-message p {
+    /* Estilos del texto del mensaje de bienvenida */
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  

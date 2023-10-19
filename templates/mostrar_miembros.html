@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/mostrar_miembro.css">
+<h1>Lista de Miembros</h1>
+<table>
+    <tr>
+        <th>ID Miembro</th>
+        <th>Nombre</th>
+        <th>ID Dirección</th>
+        <th>ID Membresía</th>
+        <th>Acciones</th>
+    </tr>
+    {% for miembro in miembros %}
+    <tr>
+        <td>{{ miembro[0] }}</td>
+        <td>{{ miembro[1] }}</td>
+        <td>{{ miembro[2] }}</td>
+        <td>{{ miembro[3] }}</td>
+        <td>
+            <a href="{{ url_for('actualizar_miembro', id_miembro=miembro[0]) }}" class="btn btn-dark">Actualizar</a>
+            <form action="{{ url_for('eliminar_miembro', id_miembro=miembro[0]) }}" method="post" style="display: inline;">
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

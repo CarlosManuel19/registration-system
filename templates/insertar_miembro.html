@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="/static/insertar_miembro.css">
+
+<h1>Insertar Miembro</h1>
+<form method="post">
+    <label for="id_miembro">ID Miembro:</label>
+    <input type="text" name="id_miembro" required><br>
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" required><br>
+    
+    <label for="id_direccion">ID Dirección:</label>
+    <input type="text" name="id_direccion" required><br>
+    
+    <label for="id_membresia">ID Membresía:</label>
+    <input type="text" name="id_membresia" required><br>
+
+    <input type="submit" value="Insertar">
+</form>
+
+{% endblock %}

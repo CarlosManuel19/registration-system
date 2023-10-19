@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styless.css') }}">
+</head>
+
+<body>
+    <div class="buttons-container">
+        <a href="{{ url_for('index') }}" class="btn btn-dark">Inicio</a>
+        <a href="{{ url_for('mostrar_miembros') }}" class="btn btn-dark">Mostrar Miembros</a>
+        <a href="{{ url_for('insertar_miembro') }}" class="btn btn-dark">Insertar Miembro</a>
+       
+        <!-- Agrega otros botones aquí si es necesario para las operaciones de ProyectoInvestigacion -->
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>
+
+

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/actualizar_miembro.css">
+
+<h1>Actualizar Miembro</h1>
+<form method="post">
+    <input type="hidden" name="id_miembro" value="{{ miembro[0] }}">
+    
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" value="{{ miembro[1] }}" required><br>
+    
+    <label for="id_direccion">ID Dirección:</label>
+    <input type="text" name="id_direccion" value="{{ miembro[2] }}" required><br>
+    
+    <label for="id_membresia">ID Membresía:</label>
+    <input type="text" name="id_membresia" value="{{ miembro[3] }}" required><br>
+
+    <input type="submit" value="Actualizar">
+</form>
+{% endblock %}
